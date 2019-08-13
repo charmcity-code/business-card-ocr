@@ -39,7 +39,12 @@ function getPhoneNumber(string) {
   let phone = array.filter(element => {
     return element.includes("-") && !element.includes("Fax");
   });
-  console.log(phone);
+  phone = phone
+    .toString()
+    // regex to match only digits
+    .match(/\d+/g)
+    .join("");
+  console.log("Phone:", phone);
 }
 
 getPhoneNumber(
