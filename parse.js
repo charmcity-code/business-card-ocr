@@ -33,8 +33,8 @@ function getName() {
   console.log("Email:", getEmailAddress());
 }
 
-function getPhoneNumber(string) {
-  array = string.split("\n");
+function getPhoneNumber() {
+  // array = string.split("\n");
   // get phone number element from array
   let phone = array.filter(element => {
     return element.includes("-") && !element.includes("Fax");
@@ -47,14 +47,14 @@ function getPhoneNumber(string) {
   console.log("Phone:", phone);
 }
 
-getPhoneNumber(
+getContactInfo(
   "ASYMMETRIK LTD\nMike Smith\nSenior Software Engineer\n(410)555-1234\nmsmith@asymmetrik.com"
 );
 
-getPhoneNumber(
+getContactInfo(
   "Foobar Technologies\nAnalytic Developer\nLisa Haung\n1234 Sentry Road\nColumbia, MD 12345\nPhone: 410-555-1234\nFax: 410-555-4321\nlisa.haung@foobartech.com"
 );
 
-getPhoneNumber(
+getContactInfo(
   "Arthur Wilson\nSoftware Engineer\nDecision & Security Technologies\nABC Technologies\n123 North 11th Street\nSuite 229\nArlington, VA 22209\nTel: +1 (703) 555-1259\nFax: +1 (703) 555-1200\nawilson@abctech.com"
 );
