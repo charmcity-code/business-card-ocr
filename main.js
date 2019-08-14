@@ -1,20 +1,38 @@
+const example1 =
+  "ASYMMETRIK LTD\nMike Smith\nSenior Software Engineer\n(410)555-1234\nmsmith@asymmetrik.com";
+
+const example2 =
+  "Foobar Technologies\nAnalytic Developer\nLisa Haung\n1234 Sentry Road\nColumbia, MD 12345\nPhone: 410-555-1234\nFax: 410-555-4321\nlisa.haung@foobartech.com";
+
+const example3 =
+  "Arthur Wilson\nSoftware Engineer\nDecision & Security Technologies\nABC Technologies\n123 North 11th Street\nSuite 229\nArlington, VA 22209\nTel: +1 (703) 555-1259\nFax: +1 (703) 555-1200\nawilson@abctech.com";
+
+function parse1() {
+  document.getElementById("result1").innerHTML = getContactInfo(example1);
+}
+
 function getContactInfo(string) {
   array = string.split("\n");
-  getName();
-  getPhoneNumber();
-  getEmailAddress();
+  return (
+    "Name: " +
+    getName(string) +
+    `<br>` +
+    "Phone: " +
+    getPhoneNumber(string) +
+    `<br>` +
+    "Email: " +
+    getEmailAddress()
+  );
 }
 
 function getEmailAddress() {
   // gets email since email is last element in array
   let email = array[array.length - 1];
   return email;
-  // for testing purposes
-  console.log("Email:", email);
 }
 
-function getName() {
-  let fullName = [];
+function getName(string) {
+  let array = string.split("\n");
   // get email name before the "@"
   let emailName = getEmailAddress().split("@")[0];
   for (let i = 0; i < array.length; i++) {
@@ -22,19 +40,16 @@ function getName() {
     let parse = array[i].toLowerCase().split(" ");
     for (let j = 0; j < parse.length; j++) {
       // check to see if parsed element is contained in email name
-      // if true, this is element is the full name
+      // if true, this element is the full name
       if (emailName.includes(parse[j])) {
-        fullName.push(array[i]);
+        return array[i];
       }
     }
   }
-  console.log("Name:", fullName[0]);
-  // console log email address for testing purposes
-  console.log("Email:", getEmailAddress());
 }
 
-function getPhoneNumber() {
-  // array = string.split("\n");
+function getPhoneNumber(string) {
+  let array = string.split("\n");
   // get phone number element from array
   let phone = array.filter(element => {
     return element.includes("-") && !element.includes("Fax");
@@ -44,17 +59,5 @@ function getPhoneNumber() {
     // regex to match only digits
     .match(/\d+/g)
     .join("");
-  console.log("Phone:", phone);
+  return phone;
 }
-
-getContactInfo(
-  "ASYMMETRIK LTD\nMike Smith\nSenior Software Engineer\n(410)555-1234\nmsmith@asymmetrik.com"
-);
-
-getContactInfo(
-  "Foobar Technologies\nAnalytic Developer\nLisa Haung\n1234 Sentry Road\nColumbia, MD 12345\nPhone: 410-555-1234\nFax: 410-555-4321\nlisa.haung@foobartech.com"
-);
-
-getContactInfo(
-  "Arthur Wilson\nSoftware Engineer\nDecision & Security Technologies\nABC Technologies\n123 North 11th Street\nSuite 229\nArlington, VA 22209\nTel: +1 (703) 555-1259\nFax: +1 (703) 555-1200\nawilson@abctech.com"
-);
