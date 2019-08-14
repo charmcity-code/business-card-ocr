@@ -40,11 +40,16 @@
         <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
       </div> -->
         <div class="one-third column">
-          ASYMMETRIK LTD<br />Mike Smith<br />Senior Software Engineer<br />
-          (410)555-1234<br />msmith@asymmetrik.com <br /><br /><input
+          <div id="example-one">
+            ASYMMETRIK LTD <br />Mike Smith <br />Senior Software Engineer
+            <br />
+            (410)555-1234 <br />msmith@asymmetrik.com <br /><br />
+          </div>
+          <input
             class="button-primary"
             type="submit"
-            value="submit input"
+            onclick="parse1()"
+            value="parse card"
           />
         </div>
         <div class="one-third column">
@@ -56,7 +61,7 @@
           Phone: 410-555-1234<br />
           Fax: 410-555-4321<br />
           lisa.haung@foobartech.com<br /><br />
-          <input class="button-primary" type="submit" value="submit input" />
+          <input class="button-primary" type="submit" value="parse card" />
         </div>
         <div class="one-third column">
           Arthur Wilson<br />
@@ -69,11 +74,15 @@
           Tel: +1 (703) 555-1259<br />
           Fax: +1 (703) 555-1200<br />
           awilson@abctech.com<br /><br />
-          <input class="button-primary" type="submit" value="submit input" />
+          <input class="button-primary" type="submit" value="parse card" />
         </div>
       </div>
 
-      <div class="container">Result</div>
+      <div class="row">
+        <div class="one-third column" id="result1">Result 1</div>
+        <div class="one-third column">Result 2</div>
+        <div class="one-third column">Result 3</div>
+      </div>
     </div>
 
     <!-- End Document
