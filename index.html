@@ -36,10 +36,12 @@
     <div class="container">
       <div class="row">
         <div class="one-third column">
-          <div id="example-one">
+          <div id="example1">
+            <!-- example test case -->
             ASYMMETRIK LTD<br />Mike Smith<br />Senior Software Engineer<br />
-            (410)555-1234<br />msmith@asymmetrik.com<br /><br />
+            (410)555-1234<br />msmith@asymmetrik.com
           </div>
+          <br />
           <input
             class="button-primary"
             type="button"
@@ -48,14 +50,18 @@
           />
         </div>
         <div class="one-third column">
-          Foobar Technologies<br />
-          Analytic Developer<br />
-          Lisa Haung<br />
-          1234 Sentry Road<br />
-          Columbia, MD 12345<br />
-          Phone: 410-555-1234<br />
-          Fax: 410-555-4321<br />
-          lisa.haung@foobartech.com<br /><br />
+          <div id="example2">
+            <!-- example test case -->
+            Foobar Technologies<br />
+            Analytic Developer<br />
+            Lisa Haung<br />
+            1234 Sentry Road<br />
+            Columbia, MD 12345<br />
+            Phone: 410-555-1234<br />
+            Fax: 410-555-4321<br />
+            lisa.haung@foobartech.com
+          </div>
+          <br />
           <input
             class="button-primary"
             type="button"
@@ -64,16 +70,20 @@
           />
         </div>
         <div class="one-third column">
-          Arthur Wilson<br />
-          Software Engineer<br />
-          Decision & Security Technologies<br />
-          ABC Technologies<br />
-          123 North 11th Street<br />
-          Suite 229<br />
-          Arlington, VA 22209<br />
-          Tel: +1 (703) 555-1259<br />
-          Fax: +1 (703) 555-1200<br />
-          awilson@abctech.com<br /><br />
+          <div id="example3">
+            <!-- example test case -->
+            Arthur Wilson<br />
+            Software Engineer<br />
+            Decision & Security Technologies<br />
+            ABC Technologies<br />
+            123 North 11th Street<br />
+            Suite 229<br />
+            Arlington, VA 22209<br />
+            Tel: +1 (703) 555-1259<br />
+            Fax: +1 (703) 555-1200<br />
+            awilson@abctech.com
+          </div>
+          <br />
           <input
             class="button-primary"
             type="button"
@@ -84,6 +94,8 @@
       </div>
 
       <div class="row" style="font-weight: bold">
+        <!-- shows parsed results of example test cases
+        blank until results are shown -->
         <div class="one-third column" id="result1">&nbsp</div>
         <div class="one-third column" id="result2">&nbsp</div>
         <div class="one-third column" id="result3">&nbsp</div>
@@ -95,21 +107,23 @@
       <div class="one-half column">
         <form>
           <label for="example">Enter business card text</label>
+          <!-- user input test case -->
           <textarea
             class="u-full-width"
             placeholder="OCR text here"
-            id="test"
+            id="example4"
             value=""
           ></textarea>
           <input
             class="button-primary"
-            id="test"
             type="button"
             onclick="parse4()"
             value="parse"
           />
         </form>
       </div>
+      <!-- shows parsed result of user input test case
+        blank until result is shown -->
       <div class="one-half column" style="font-weight: bold" id="result4">
         &nbsp
       </div>
