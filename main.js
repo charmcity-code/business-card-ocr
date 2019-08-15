@@ -19,8 +19,10 @@ function parse3() {
 }
 
 function parse4() {
-  let value = document.getElementById("test").value;
-  console.log(getContactInfo(value));
+  // get user input and then parse
+  let inputValue = document.getElementById("test").value;
+  document.getElementById("result4").innerHTML =
+    "Result:" + `<br>` + getContactInfo(inputValue);
 }
 
 function getContactInfo(string) {
