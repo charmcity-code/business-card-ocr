@@ -1,30 +1,4 @@
-const example1 =
-  "ASYMMETRIK LTD\nMike Smith\nSenior Software Engineer\n(410)555-1234\nmsmith@asymmetrik.com";
-
-const example2 =
-  "Foobar Technologies\nAnalytic Developer\nLisa Haung\n1234 Sentry Road\nColumbia, MD 12345\nPhone: 410-555-1234\nFax: 410-555-4321\nlisa.haung@foobartech.com";
-
-const example3 =
-  "Arthur Wilson\nSoftware Engineer\nDecision & Security Technologies\nABC Technologies\n123 North 11th Street\nSuite 229\nArlington, VA 22209\nTel: +1 (703) 555-1259\nFax: +1 (703) 555-1200\nawilson@abctech.com";
-
-function parse1() {
-  document.getElementById("result1").innerHTML = getContactInfo(example1);
-}
-function parse2() {
-  document.getElementById("result2").innerHTML = getContactInfo(example2);
-}
-
-function parse3() {
-  document.getElementById("result3").innerHTML = getContactInfo(example3);
-}
-
-function parse4() {
-  // get user input and then parse
-  let inputValue = document.getElementById("test").value;
-  document.getElementById("result4").innerHTML =
-    "Result:" + `<br>` + getContactInfo(inputValue);
-}
-
+// returns full name, phone number and email address
 function getContactInfo(string) {
   array = string.split("\n");
   return (
@@ -39,12 +13,14 @@ function getContactInfo(string) {
   );
 }
 
+// returns email address
 function getEmailAddress() {
   // gets email since email is last element in array
   let email = array[array.length - 1];
   return email;
 }
 
+// returns full name
 function getName(string) {
   let array = string.split("\n");
   // get email name before the "@"
@@ -62,6 +38,7 @@ function getName(string) {
   }
 }
 
+// returns phone number
 function getPhoneNumber(string) {
   let array = string.split("\n");
   // get phone number element from array
@@ -74,4 +51,29 @@ function getPhoneNumber(string) {
     .match(/\d+/g)
     .join("");
   return phone;
+}
+
+// gets text value of example 1 from html, parses and displays parsed result
+function parse1() {
+  let value = document.getElementById("example1").innerText;
+  document.getElementById("result1").innerHTML = getContactInfo(value);
+}
+
+// gets text value of example 2 from html, parses and displays parsed result
+function parse2() {
+  let value = document.getElementById("example2").innerText;
+  document.getElementById("result2").innerHTML = getContactInfo(value);
+}
+
+// gets text value of example 3 from html, parses and displays parsed result
+function parse3() {
+  let value = document.getElementById("example3").innerText;
+  document.getElementById("result3").innerHTML = getContactInfo(value);
+}
+
+// gets text value of user input from html, parses and displays parsed result
+function parse4() {
+  let value = document.getElementById("example4").value;
+  document.getElementById("result4").innerHTML =
+    "Result" + `<br>` + getContactInfo(value);
 }
