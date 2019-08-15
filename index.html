@@ -4,7 +4,7 @@
     <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8" />
-    <title>Your page title here :)</title>
+    <title>Business Card OCR</title>
     <meta name="description" content="" />
     <meta name="author" content="" />
 
@@ -30,15 +30,11 @@
     <link rel="icon" type="image/png" href="images/favicon.png" />
   </head>
   <body>
-    <h4>Hello World!</h4>
+    <h5 style="margin: 5px">Business Card OCR</h5>
     <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="container">
       <div class="row">
-        <!-- <div class="one-half column" style="margin-top: 25%">
-        <h4>Basic Page</h4>
-        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
-      </div> -->
         <div class="one-third column">
           <div id="example-one">
             ASYMMETRIK LTD <br />Mike Smith <br />Senior Software Engineer
@@ -47,9 +43,9 @@
           </div>
           <input
             class="button-primary"
-            type="submit"
+            type="button"
             onclick="parse1()"
-            value="parse card"
+            value="parse"
           />
         </div>
         <div class="one-third column">
@@ -61,7 +57,12 @@
           Phone: 410-555-1234<br />
           Fax: 410-555-4321<br />
           lisa.haung@foobartech.com<br /><br />
-          <input class="button-primary" type="submit" value="parse card" />
+          <input
+            class="button-primary"
+            type="button"
+            onclick="parse2()"
+            value="parse"
+          />
         </div>
         <div class="one-third column">
           Arthur Wilson<br />
@@ -74,15 +75,43 @@
           Tel: +1 (703) 555-1259<br />
           Fax: +1 (703) 555-1200<br />
           awilson@abctech.com<br /><br />
-          <input class="button-primary" type="submit" value="parse card" />
+          <input
+            class="button-primary"
+            type="button"
+            onclick="parse3()"
+            value="parse"
+          />
         </div>
       </div>
 
-      <div class="row">
-        <div class="one-third column" id="result1">Result 1</div>
-        <div class="one-third column">Result 2</div>
-        <div class="one-third column">Result 3</div>
+      <div class="row" style="font-weight: bold">
+        <div class="one-third column" id="result1">&nbsp</div>
+        <div class="one-third column" id="result2">&nbsp</div>
+        <div class="one-third column" id="result3">&nbsp</div>
       </div>
+    </div>
+    <hr />
+
+    <div class="row">
+      <div class="one-half column">
+        <form>
+          <label for="exampleMessage">Message</label>
+          <textarea
+            class="u-full-width"
+            placeholder="Hi Dave …"
+            id="test"
+            value=""
+          ></textarea>
+          <input
+            class="button-primary"
+            id="test"
+            type="button"
+            onclick="parse4()"
+            value="Submit"
+          />
+        </form>
+      </div>
+      <div class="one-half column">Result</div>
     </div>
 
     <!-- End Document

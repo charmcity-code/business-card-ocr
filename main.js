@@ -10,6 +10,18 @@ const example3 =
 function parse1() {
   document.getElementById("result1").innerHTML = getContactInfo(example1);
 }
+function parse2() {
+  document.getElementById("result2").innerHTML = getContactInfo(example2);
+}
+
+function parse3() {
+  document.getElementById("result3").innerHTML = getContactInfo(example3);
+}
+
+function parse4() {
+  let value = document.getElementById("test").value;
+  console.log(getContactInfo(value));
+}
 
 function getContactInfo(string) {
   array = string.split("\n");
