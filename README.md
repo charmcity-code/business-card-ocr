@@ -1,4 +1,4 @@
-# Business Card OCR
+# Business Card Parser
 
 Sample app takes business card text as input and outputs the name, phone, and email address of the business card owner.
 
