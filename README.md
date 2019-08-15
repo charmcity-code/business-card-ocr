@@ -4,7 +4,7 @@ Sample app takes business card text as input and outputs the name, phone, and em
 
 ## Installation
 
-Fork or clone this repo and then open index.html.
+Fork or clone this repo and then open index.html in a browser.
 
 ## Usage
 
