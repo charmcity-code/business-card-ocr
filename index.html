@@ -30,7 +30,7 @@
     <link rel="icon" type="image/png" href="images/favicon.png" />
   </head>
   <body>
-    <h5 style="margin: 5px">Business Card OCR</h5>
+    <h5 style="margin: 5px 15px">Business Card OCR</h5>
     <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="container">
@@ -92,13 +92,13 @@
     </div>
     <hr />
 
-    <div class="row">
+    <div class="row" style="margin: 0px 15px">
       <div class="one-half column">
         <form>
-          <label for="exampleMessage">Message</label>
+          <label for="example">Enter business card text</label>
           <textarea
             class="u-full-width"
-            placeholder="Hi Dave …"
+            placeholder="OCR text here"
             id="test"
             value=""
           ></textarea>
@@ -107,11 +107,13 @@
             id="test"
             type="button"
             onclick="parse4()"
-            value="Submit"
+            value="parse"
           />
         </form>
       </div>
-      <div class="one-half column">Result</div>
+      <div class="one-half column" style="font-weight: bold" id="result4">
+        &nbsp
+      </div>
     </div>
 
     <!-- End Document
